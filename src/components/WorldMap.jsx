@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Globe2 } from 'lucide-react';
 
 export default function WorldMap() {
-  const [spot, setSpot] = useState({ x: 500, y: 235 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [hoveredDot, setHoveredDot] = useState(null);
 
   const handlePointerMove = (event) => {
     const svg = event.currentTarget;
@@ -11,12 +10,19 @@ export default function WorldMap() {
     point.x = event.clientX;
     point.y = event.clientY;
     const svgPoint = point.matrixTransform(svg.getScreenCTM().inverse());
-    setSpot({ x: svgPoint.x, y: svgPoint.y });
+    if (event.target.classList.contains('map-hit-area')) {
+      setHoveredDot({
+        x: Math.floor((svgPoint.x - 1) / 8) * 8,
+        y: Math.floor((svgPoint.y - 1) / 8) * 8,
+      });
+    } else {
+      setHoveredDot(null);
+    }
   };
 
   return (
     <div className="map-art">
-      <svg className="world-map" viewBox="0 0 1000 470" aria-label="Dotted world map. Hover over Bangladesh to learn about Versa Craft Limited." onPointerMove={handlePointerMove} onPointerEnter={() => setIsHovering(true)} onPointerLeave={() => setIsHovering(false)}>
+      <svg className="world-map" viewBox="0 0 1000 470" aria-label="Dotted world map. Hover over Bangladesh to learn about Versa Craft Limited." onPointerMove={handlePointerMove} onPointerLeave={() => setHoveredDot(null)}>
         <defs>
           <pattern id="mapDots" width="8" height="8" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="5" height="5" fill="#83aaff" opacity=".82" /></pattern>
           <g id="continentShapes">
@@ -27,11 +33,11 @@ export default function WorldMap() {
             <path d="m711 291 30-18 43 8 30 16 43-5 45 17 27 27-13 22-41 4-34 17-35-12-28 14-33-13-39 8-23-22 17-24-10-20 21-19Z" />
             <path d="m822 106 30-15 38 9 23 21-9 21-33 11-34-14-16-17Z" />
           </g>
-          <radialGradient id="cursorGlow" gradientUnits="userSpaceOnUse" cx={spot.x} cy={spot.y} r="104"><stop offset="0" stopColor="#d6ff92" stopOpacity="1"/><stop offset=".4" stopColor="#73bdff" stopOpacity=".72"/><stop offset="1" stopColor="#6198ff" stopOpacity="0"/></radialGradient>
         </defs>
         <g className="map-grid" stroke="#4266a5" strokeWidth=".7" opacity=".32"><path d="M0 78H1000M0 157H1000M0 235H1000M0 313H1000M0 392H1000M125 0V470M250 0V470M375 0V470M500 0V470M625 0V470M750 0V470M875 0V470" /></g>
-        <use href="#continentShapes" fill="url(#mapDots)" />
-        <use href="#continentShapes" className={`map-glow${isHovering ? ' map-glow-visible' : ''}`} fill="url(#cursorGlow)" />
+        <use href="#continentShapes" className="map-hit-area" fill="transparent" />
+        <use href="#continentShapes" className="map-base-dots" fill="url(#mapDots)" />
+        {hoveredDot && <rect key={`${hoveredDot.x}-${hoveredDot.y}`} className="map-hover-square" x={hoveredDot.x} y={hoveredDot.y} width="7" height="7" rx=".5" />}
         <g className="bangladesh-marker" tabIndex="0" role="button" aria-label="Versa Craft Limited is based in Bangladesh"><circle cx="665" cy="192" r="20" className="marker-ring"/><circle cx="665" cy="192" r="7" className="marker-core"/></g>
       </svg>
       <div className="map-tooltip"><span className="tooltip-overline">OUR HOME BASE</span><b>Versa Craft Limited</b><span>Dhaka, Bangladesh ↗</span></div>

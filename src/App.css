@@ -13,7 +13,7 @@
 .map-art:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#3862c51a 1px,transparent 1px);background-size:24px 24px;opacity:.36;pointer-events:none}
 .world-map{position:relative;width:100%;height:100%;overflow:hidden;touch-action:pan-y}
 .map-grid{pointer-events:none}
-.map-glow{opacity:0;transition:opacity .18s;pointer-events:none}.map-glow-visible{opacity:.8}
+.map-hit-area{fill:transparent;pointer-events:all}.map-base-dots{pointer-events:none}.map-hover-square{fill:#d6ff92;filter:drop-shadow(0 0 5px #c5ff8b);pointer-events:none}
 .bangladesh-marker{cursor:pointer;outline:none}.marker-ring{fill:#7eafff28;stroke:#98b9ff;stroke-width:1.4;transform-box:fill-box;transform-origin:center;animation:pulse 2s infinite}.marker-core{fill:#d6ff92;stroke:#fff;stroke-width:2}
 .bangladesh-marker:hover .marker-ring,.bangladesh-marker:focus .marker-ring{stroke:#e5ffab;stroke-width:2.3;filter:drop-shadow(0 0 8px #9ddcff)}
 .map-tooltip{position:absolute;left:65%;top:35%;z-index:3;display:flex;flex-direction:column;gap:4px;min-width:157px;padding:11px 13px;border:1px solid #83aaff66;border-radius:5px;background:#10295aef;color:#fff;box-shadow:0 9px 30px #02091c77;opacity:0;visibility:hidden;transform:translate(12px,8px);transition:opacity .18s,transform .18s,visibility .18s;pointer-events:none}
