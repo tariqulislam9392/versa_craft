@@ -26,7 +26,7 @@ export default function Footer() {
           <p>Good things come together.<br />Rooted in Bangladesh, connected to the world.</p>
           <div className="footer-socials" aria-label="Social media"><span>FOLLOW US</span><div>{socialLinks.map((social) => <a key={social.name} href={social.href} target="_blank" rel="noreferrer" aria-label={`Visit ${social.name}`}><SocialIcon name={social.name === 'X / Twitter' ? 'X' : social.name} /></a>)}</div></div>
         </div>
-        <div className="footer-group"><h3>About VLC</h3><a href="#about">Company profile</a><a href="#about">Investors</a><a href="#about">Press</a><a href="#about">Legal information</a></div>
+        <div className="footer-group"><h3>About VCL</h3><a href="#about">Company profile</a><a href="#about">Investors</a><a href="#about">Press</a><a href="#about">Legal information</a></div>
         <div className="footer-group"><h3>Resources</h3><a href="mailto:hello@versacraftlimited.com">Contact us</a><a href="#services">Service compliance</a><a href="#services">Service recall</a><a href="mailto:hello@versacraftlimited.com">Support</a></div>
         <div className="footer-group"><h3>Our services</h3><a href="#services">Product development</a><a href="#services">Responsible sourcing</a><a href="#services">Quality &amp; delivery</a><a href="#services">All services <ArrowUpRight size={13} /></a></div>
       </div>
