@@ -1,30 +1,31 @@
 import { useState } from 'react';
-import { Globe2 } from 'lucide-react';
 
 export default function WorldMap() {
-  const [hoveredDot, setHoveredDot] = useState(null);
+  const [activeSquare, setActiveSquare] = useState(null);
 
   const handlePointerMove = (event) => {
-    const svg = event.currentTarget;
-    const point = svg.createSVGPoint();
+    if (!event.target.classList.contains('map-hit-area')) {
+      setActiveSquare(null);
+      return;
+    }
+
+    const point = event.currentTarget.createSVGPoint();
     point.x = event.clientX;
     point.y = event.clientY;
-    const svgPoint = point.matrixTransform(svg.getScreenCTM().inverse());
-    if (event.target.classList.contains('map-hit-area')) {
-      setHoveredDot({
-        x: Math.floor((svgPoint.x - 1) / 8) * 8,
-        y: Math.floor((svgPoint.y - 1) / 8) * 8,
-      });
-    } else {
-      setHoveredDot(null);
-    }
+    const local = point.matrixTransform(event.currentTarget.getScreenCTM().inverse());
+    setActiveSquare({
+      x: Math.floor((local.x - 1) / 8) * 8 + 1,
+      y: Math.floor((local.y - 1) / 8) * 8 + 1,
+    });
   };
 
   return (
-    <div className="map-art">
-      <svg className="world-map" viewBox="0 0 1000 470" aria-label="Dotted world map. Hover over Bangladesh to learn about Versa Craft Limited." onPointerMove={handlePointerMove} onPointerLeave={() => setHoveredDot(null)}>
+    <section className="map-art" aria-label="Versa Craft Limited worldwide">
+      <svg className="world-map" viewBox="0 0 1000 470" role="img" aria-label="World map with Bangladesh highlighted" onPointerMove={handlePointerMove} onPointerLeave={() => setActiveSquare(null)}>
         <defs>
-          <pattern id="mapDots" width="8" height="8" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="5" height="5" fill="#83aaff" opacity=".82" /></pattern>
+          <pattern id="mapDots" width="8" height="8" patternUnits="userSpaceOnUse">
+            <rect className="map-square-light" x="1" y="1" width="5" height="5" rx=".4" fill="#83aaff" />
+          </pattern>
           <g id="continentShapes">
             <path d="m50 129 30-31 54-22 47 10 30-24 51 6 34-25 55 9 19 25-12 22-37 4-12 29-31 14-18 35-37 1-10 28-33 12-15 38-30 6-10-27-24-13-4-30-24-12-19-27-26-6-14-24-28-9-5-19Z" />
             <path d="m242 252 31 2 27 21 17 39-8 38-23 18-10 44-20 36-17-22-3-37-18-29-4-37 15-32 13-41Z" />
@@ -34,14 +35,23 @@ export default function WorldMap() {
             <path d="m822 106 30-15 38 9 23 21-9 21-33 11-34-14-16-17Z" />
           </g>
         </defs>
-        <g className="map-grid" stroke="#4266a5" strokeWidth=".7" opacity=".32"><path d="M0 78H1000M0 157H1000M0 235H1000M0 313H1000M0 392H1000M125 0V470M250 0V470M375 0V470M500 0V470M625 0V470M750 0V470M875 0V470" /></g>
+        <g className="map-grid" aria-hidden="true">
+          <path d="M0 78H1000M0 157H1000M0 235H1000M0 313H1000M0 392H1000M125 0V470M250 0V470M375 0V470M500 0V470M625 0V470M750 0V470M875 0V470" />
+        </g>
         <use href="#continentShapes" className="map-hit-area" fill="transparent" />
-        <use href="#continentShapes" className="map-base-dots" fill="url(#mapDots)" />
-        {hoveredDot && <rect key={`${hoveredDot.x}-${hoveredDot.y}`} className="map-hover-square" x={hoveredDot.x} y={hoveredDot.y} width="7" height="7" rx=".5" />}
-        <g className="bangladesh-marker" tabIndex="0" role="button" aria-label="Versa Craft Limited is based in Bangladesh"><circle cx="665" cy="192" r="20" className="marker-ring"/><circle cx="665" cy="192" r="7" className="marker-core"/></g>
+        <use href="#continentShapes" className="map-land" fill="url(#mapDots)" />
+        {activeSquare && <rect className="map-hover-square" x={activeSquare.x} y={activeSquare.y} width="5" height="5" rx=".4" />}
+        <g className="bangladesh-marker" aria-label="Versa Craft Limited location: Dhaka, Bangladesh">
+          <circle cx="665" cy="192" r="18" className="marker-ring" />
+          <circle cx="665" cy="192" r="6" className="marker-core" />
+        </g>
       </svg>
-      <div className="map-tooltip"><span className="tooltip-overline">OUR HOME BASE</span><b>Versa Craft Limited</b><span>Dhaka, Bangladesh ↗</span></div>
-      <div className="map-caption"><Globe2 size={14} /> ROOTED IN BANGLADESH · CONNECTED TO THE WORLD</div>
-    </div>
+      <div className="map-tooltip">
+        <span>OUR LOCATION</span>
+        <strong>Versa Craft Limited</strong>
+        <small>Dhaka, Bangladesh</small>
+      </div>
+      <div className="map-caption">ROOTED IN BANGLADESH · CONNECTED TO THE WORLD</div>
+    </section>
   );
 }
