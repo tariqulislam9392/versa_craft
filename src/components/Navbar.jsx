@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import logo from '../assets/vcl-logo.png';
+import logo from '../assets/vcl-symbol.png';
 
 const links = [
   { label: 'About', href: '#about' },
@@ -16,7 +16,8 @@ export default function Navbar() {
     <header className="site-header">
       <nav className="nav-wrap" aria-label="Main navigation">
         <a className="brand" href="#home" aria-label="VersaCraft Limited home">
-          <img src={logo} alt="VersaCraft Limited" />
+          <span className="brand-mark"><img src={logo} alt="" /></span>
+          <span className="brand-name">VersaCraft <small>Limited</small></span>
         </a>
         <div className={`nav-links${open ? ' nav-links-open' : ''}`}>
           {links.map((link) => <a key={link.label} href={link.href} onClick={() => setOpen(false)}>{link.label}</a>)}
