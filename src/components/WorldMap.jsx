@@ -41,7 +41,7 @@ export default function WorldMap() {
         <use href="#continentShapes" className="map-hit-area" fill="transparent" />
         <use href="#continentShapes" className="map-land" fill="url(#mapDots)" />
         {activeSquare && <rect className="map-hover-square" x={activeSquare.x} y={activeSquare.y} width="5" height="5" rx=".4" />}
-        <g className="bangladesh-marker" aria-label="Versa Craft Limited location: Dhaka, Bangladesh">
+        <g className="bangladesh-marker" tabIndex="0" aria-label="Versa Craft Limited location: Dhaka, Bangladesh">
           <circle cx="665" cy="192" r="18" className="marker-ring" />
           <circle cx="665" cy="192" r="6" className="marker-core" />
         </g>

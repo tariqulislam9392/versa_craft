@@ -19,9 +19,10 @@
 .marker-ring{fill:#75a5ff29;stroke:#91b7ff;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:location-pulse 2.2s ease-out infinite}
 .marker-core{fill:#d9eaff;stroke:#fff;stroke-width:2}
 @keyframes location-pulse{0%,100%{opacity:.55;transform:scale(.88)}50%{opacity:1;transform:scale(1.12)}}
-.map-tooltip{position:absolute;left:calc(50% + min(15vw,150px));top:39%;display:flex;flex-direction:column;gap:3px;padding:9px 12px;background:#0b1b46ef;border:1px solid #6585ca75;box-shadow:0 7px 22px #030a1e55;color:#f5f8ff;white-space:nowrap;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .18s ease .24s,transform .18s ease .24s,visibility 0s linear .42s}
-.map-art:has(.bangladesh-marker:hover) .map-tooltip{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .18s ease,transform .18s ease,visibility 0s}
-.map-tooltip:before{content:"";position:absolute;left:-6px;top:14px;width:10px;height:10px;border-left:1px solid #6585ca75;border-bottom:1px solid #6585ca75;background:#0b1b46;transform:rotate(45deg)}
+.map-tooltip{position:absolute;left:calc(50% + min(16.5vw,195px) + 14px);top:calc(41% - 15px);display:flex;flex-direction:column;gap:3px;padding:9px 12px;background:#0b1b46ef;border:1px solid #6585ca75;box-shadow:0 7px 22px #030a1e55;color:#f5f8ff;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(4px);transition:opacity .18s ease .18s,transform .18s ease .18s,visibility 0s linear .36s}
+.map-art:has(.bangladesh-marker:hover,.bangladesh-marker:focus-visible,.map-tooltip:hover) .map-tooltip{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition:opacity .18s ease,transform .18s ease,visibility 0s}
+.map-tooltip:before{content:"";position:absolute;left:-6px;top:9px;width:10px;height:10px;border-left:1px solid #6585ca75;border-bottom:1px solid #6585ca75;background:#0b1b46;transform:rotate(45deg)}
+.bangladesh-marker{cursor:pointer;outline:none}.bangladesh-marker:focus,.bangladesh-marker:focus-visible{outline:none}
 .map-tooltip span{color:#9cb9f4;font-size:7px;font-weight:700;letter-spacing:1px}.map-tooltip strong{font:700 10px Manrope,sans-serif}.map-tooltip small{color:#c1cdef;font-size:9px}
 .map-caption{position:absolute;right:max(20px,calc((100% - 1180px)/2));bottom:12px;color:#bbc9ed;font-size:7px;font-weight:700;letter-spacing:1px}
 
@@ -150,6 +151,7 @@ body{background:#090e0d;color:#edf5f2}
 .hero-art-logo>span{color:#f2f7f4;font:800 22px/1.05 Manrope,sans-serif;letter-spacing:-.04em}
 .hero-art-logo small{display:block;margin-top:4px;color:#a8c1b5;font:700 9px/1 'DM Sans',sans-serif;letter-spacing:3px;text-transform:uppercase}
 @media(max-width:700px){.hero-art-logo{top:23px;width:max-content;padding:0}.hero-art-logo>span{font-size:18px}.hero-art-logo small{font-size:8px;letter-spacing:2.5px}}
+@media(max-width:700px){.map-tooltip{left:calc(50% + 16.5vw);top:47%;transform:translate(-50%,4px)}.map-art:has(.bangladesh-marker:hover,.bangladesh-marker:focus-visible,.map-tooltip:hover) .map-tooltip{transform:translate(-50%,0)}.map-tooltip:before{left:calc(50% - 5px);top:-6px;transform:rotate(135deg)}}
 .about{background:radial-gradient(ellipse at 85% 38%,#12352c 0%,transparent 60%),linear-gradient(180deg,#090e0d 0%,#101a17 50%,#090e0d 100%)}
 .pillars{background:radial-gradient(ellipse at 12% 48%,#123a30 0%,transparent 58%),linear-gradient(180deg,#090e0d 0%,#0d1916 50%,#090e0d 100%)}
 .services{background:radial-gradient(ellipse at 88% 40%,#12372e 0%,transparent 58%),linear-gradient(180deg,#090e0d 0%,#111a17 50%,#090e0d 100%)}
