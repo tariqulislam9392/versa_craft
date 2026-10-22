@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import logo from '../assets/vcl-symbol.png';
+import logo from '../assets/vcl-symbol-transparent.png';
 
 const links = [
   { label: 'About', href: '#about' },

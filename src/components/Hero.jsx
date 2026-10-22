@@ -1,5 +1,4 @@
 import { ArrowDown, ArrowUpRight, BadgeCheck, Clock3, Sparkles } from 'lucide-react';
-import logo from '../assets/vcl-logo.png';
 
 export default function Hero() {
   return (
@@ -16,7 +15,7 @@ export default function Hero() {
         <div className="hero-prepared"><span>PREPARED BY</span><b>VersaRoots Holdings</b></div>
       </div>
       <div className="hero-art" aria-label="VersaCraft Limited brand illustration">
-        <div className="hero-art-logo"><img src={logo} alt="VersaCraft Limited" /></div>
+        <div className="hero-art-logo"><span>VersaCraft<small>Limited</small></span></div>
         <div className="hero-art-orbit hero-art-orbit-one" />
         <div className="hero-art-orbit hero-art-orbit-two" />
         <div className="hero-art-core"><Sparkles size={34} strokeWidth={1.3} /><span>Built around<br />what matters</span></div>
