@@ -4,6 +4,7 @@ import logo from '../assets/vcl-symbol-transparent.png';
 
 const links = [
   { label: 'About', href: '#about' },
+  { label: 'Products', href: '#services' },
   { label: 'Services', href: '#services' },
   { label: 'Industries', href: '#industries' },
   { label: 'Partners', href: '#partners' },
