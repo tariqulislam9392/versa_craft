@@ -2756,6 +2756,18 @@ body {
     text-transform: uppercase
 }
 
+.hero-art-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 74%;
+    height: auto;
+    opacity: .16;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
 @media(max-width:700px) {
     .hero-art-logo {
         top: 23px;
@@ -3344,6 +3356,136 @@ body {
 
     .map-art:has(.bangladesh-marker:hover, .bangladesh-marker:focus-visible, .map-tooltip:hover) .map-tooltip {
         transform: translateY(0);
+    }
+}
+
+
+/* Layer the service cards as a rising stack, like the supplied phase-card reference. */
+.hero-art::before {
+    content: none;
+}
+
+.services {
+    padding-top: 72px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 18px;
+}
+
+.services .section-heading {
+    position: relative;
+    top: auto;
+    z-index: auto;
+}
+
+.service-card {
+    position: sticky;
+    height: 340px;
+    margin: 0;
+    transition: box-shadow .2s, filter .2s;
+}
+
+.service-card:nth-child(n + 2) {
+    margin-top: -32px;
+}
+
+.service-card:nth-child(1) {
+    top: max(250px, calc(50vh - 180px));
+    z-index: 1;
+}
+
+.service-card:nth-child(2) {
+    top: max(264px, calc(50vh - 166px));
+    z-index: 2;
+}
+
+.service-card:nth-child(3) {
+    top: max(278px, calc(50vh - 152px));
+    z-index: 3;
+}
+
+.service-card:nth-child(4) {
+    top: max(292px, calc(50vh - 138px));
+    z-index: 4;
+}
+
+.service-card:nth-child(5) {
+    top: max(306px, calc(50vh - 124px));
+    z-index: 5;
+}
+
+.service-card:nth-child(2)::before {
+    left: 20%;
+}
+
+.service-card:nth-child(3)::before {
+    left: 40%;
+}
+
+.service-card:nth-child(4)::before {
+    left: 60%;
+}
+
+.service-card:nth-child(5)::before {
+    left: 80%;
+}
+
+.service-card::before {
+    width: min(190px, 16.2%);
+}
+
+.service-card:hover {
+    transform: none;
+}
+
+@media(max-width:900px) {
+    .service-card {
+        position: relative;
+        height: auto;
+        min-height: 340px;
+        top: auto !important;
+    }
+
+    .service-card:nth-child(n + 2) {
+        margin-top: -28px;
+    }
+}
+
+@media(max-width:700px) {
+    .service-grid {
+        padding-top: 14px;
+    }
+
+    .service-card:nth-child(2)::before {
+        left: 18%;
+    }
+
+    .service-card:nth-child(3)::before {
+        left: 36%;
+    }
+
+    .service-card:nth-child(4)::before {
+        left: 54%;
+    }
+
+    .service-card:nth-child(5)::before {
+        left: 68%;
+    }
+
+    .service-card::before {
+        width: 110px;
+    }
+
+    .service-card {
+        min-height: 0;
+    }
+
+    .service-card:nth-child(n + 2) {
+        margin-top: -22px;
     }
 }
 
