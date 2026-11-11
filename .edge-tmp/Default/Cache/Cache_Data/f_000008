@@ -1,0 +1,594 @@
+import { createHotContext as __vite__createHotContext } from "/versa_craft/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Footer.jsx");const _jsxDEV = __vite__cjsImport2_react_jsxDevRuntime["jsxDEV"];import logoSymbol from "/versa_craft/src/assets/vcl-symbol-clean.png?import";
+import { ArrowUpRight } from "/versa_craft/node_modules/.vite/deps/lucide-react.js?v=214b6b2e";
+var _jsxFileName = "D:/Out Project/versa_craft_limited/src/components/Footer.jsx";
+import __vite__cjsImport2_react_jsxDevRuntime from "/versa_craft/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=214b6b2e";
+function SocialIcon({ name }) {
+	const props = {
+		viewBox: "0 0 24 24",
+		width: 17,
+		height: 17,
+		"aria-hidden": true
+	};
+	if (name === "Facebook") return /* @__PURE__ */ _jsxDEV("svg", {
+		...props,
+		fill: "currentColor",
+		children: /* @__PURE__ */ _jsxDEV("path", { d: "M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h2.8v8z" }, void 0, false, {
+			fileName: _jsxFileName,
+			lineNumber: 6,
+			columnNumber: 71
+		}, this)
+	}, void 0, false, {
+		fileName: _jsxFileName,
+		lineNumber: 6,
+		columnNumber: 35
+	}, this);
+	if (name === "Instagram") return /* @__PURE__ */ _jsxDEV("svg", {
+		...props,
+		fill: "none",
+		stroke: "currentColor",
+		strokeWidth: "1.8",
+		children: [
+			/* @__PURE__ */ _jsxDEV("rect", {
+				x: "3",
+				y: "3",
+				width: "18",
+				height: "18",
+				rx: "5"
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 7,
+				columnNumber: 104
+			}, this),
+			/* @__PURE__ */ _jsxDEV("circle", {
+				cx: "12",
+				cy: "12",
+				r: "4"
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 7,
+				columnNumber: 154
+			}, this),
+			/* @__PURE__ */ _jsxDEV("circle", {
+				cx: "18",
+				cy: "6.5",
+				r: ".8",
+				fill: "currentColor",
+				stroke: "none"
+			}, void 0, false, {
+				fileName: _jsxFileName,
+				lineNumber: 7,
+				columnNumber: 186
+			}, this)
+		]
+	}, void 0, true, {
+		fileName: _jsxFileName,
+		lineNumber: 7,
+		columnNumber: 36
+	}, this);
+	if (name === "LinkedIn") return /* @__PURE__ */ _jsxDEV("svg", {
+		...props,
+		fill: "currentColor",
+		children: /* @__PURE__ */ _jsxDEV("path", { d: "M5.2 8.6H2.1V22h3.1V8.6ZM3.7 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM22 14.3c0-4-2.1-5.9-4.9-5.9a4.2 4.2 0 0 0-3.8 2.1V8.6h-3V22h3.1v-6.6c0-1.7.3-3.4 2.5-3.4s2.2 2 2.2 3.5V22H22v-7.7Z" }, void 0, false, {
+			fileName: _jsxFileName,
+			lineNumber: 8,
+			columnNumber: 71
+		}, this)
+	}, void 0, false, {
+		fileName: _jsxFileName,
+		lineNumber: 8,
+		columnNumber: 35
+	}, this);
+	return /* @__PURE__ */ _jsxDEV("svg", {
+		...props,
+		fill: "currentColor",
+		children: /* @__PURE__ */ _jsxDEV("path", { d: "M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" }, void 0, false, {
+			fileName: _jsxFileName,
+			lineNumber: 9,
+			columnNumber: 46
+		}, this)
+	}, void 0, false, {
+		fileName: _jsxFileName,
+		lineNumber: 9,
+		columnNumber: 10
+	}, this);
+}
+_c = SocialIcon;
+const socialLinks = [
+	{
+		name: "LinkedIn",
+		href: "https://www.linkedin.com/company/versacraftlimited"
+	},
+	{
+		name: "Facebook",
+		href: "https://www.facebook.com/VersaCraftLimited"
+	},
+	{
+		name: "Instagram",
+		href: "https://www.instagram.com/VersaCraftLimited"
+	},
+	{
+		name: "YouTube",
+		href: "https://www.youtube.com/@VersaCraftLimited"
+	}
+];
+export default function Footer() {
+	return /* @__PURE__ */ _jsxDEV("footer", {
+		className: "footer",
+		id: "contact",
+		children: [
+			/* @__PURE__ */ _jsxDEV("div", {
+				className: "contact-section section-pad",
+				children: [/* @__PURE__ */ _jsxDEV("div", {
+					className: "contact-copy",
+					children: [
+						/* @__PURE__ */ _jsxDEV("span", {
+							className: "eyebrow",
+							children: "LET'S BUILD THE FUTURE, TOGETHER"
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 39
+						}, this),
+						/* @__PURE__ */ _jsxDEV("h2", { children: [
+							"Have a project",
+							/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 122
+							}, this),
+							"in ",
+							/* @__PURE__ */ _jsxDEV("em", { children: "mind?" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 131
+							}, this)
+						] }, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 104
+						}, this),
+						/* @__PURE__ */ _jsxDEV("p", { children: "Tell us what you need. Our team will help you find the right people and the right next step." }, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 150
+						}, this),
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "button-primary",
+							href: "mailto:info@versacraft.co",
+							children: ["Start a conversation ", /* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 17 }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 23,
+								columnNumber: 333
+							}, this)]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 23,
+							columnNumber: 249
+						}, this)
+					]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 23,
+					columnNumber: 9
+				}, this), /* @__PURE__ */ _jsxDEV("div", {
+					className: "contact-details",
+					children: [
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "contact-item",
+							href: "https://maps.google.com/?q=Rakhi+Tower,+Arichpur+Road,+Tongi,+Gazipur,+Dhaka,+Bangladesh",
+							target: "_blank",
+							rel: "noreferrer",
+							children: [
+								/* @__PURE__ */ _jsxDEV("span", { children: "01 / HOME OFFICE" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 25,
+									columnNumber: 168
+								}, this),
+								/* @__PURE__ */ _jsxDEV("b", { children: [
+									"Rakhi Tower, Arichpur Road,",
+									/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 25,
+										columnNumber: 227
+									}, this),
+									"Tongi, Gazipur, Dhaka, Bangladesh"
+								] }, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 25,
+									columnNumber: 197
+								}, this),
+								/* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 15 }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 25,
+									columnNumber: 270
+								}, this)
+							]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 25,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "contact-item",
+							href: "tel:+8801818848850",
+							children: [
+								/* @__PURE__ */ _jsxDEV("span", { children: "02 / CALL OUR TEAM" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 26,
+									columnNumber: 65
+								}, this),
+								/* @__PURE__ */ _jsxDEV("b", { children: "+88 01818 848850" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 26,
+									columnNumber: 96
+								}, this),
+								/* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 15 }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 26,
+									columnNumber: 119
+								}, this)
+							]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 26,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "contact-item",
+							href: "mailto:info@versacraft.co",
+							children: [
+								/* @__PURE__ */ _jsxDEV("span", { children: "03 / EMAIL US" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 27,
+									columnNumber: 72
+								}, this),
+								/* @__PURE__ */ _jsxDEV("b", { children: "info@versacraft.co" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 27,
+									columnNumber: 98
+								}, this),
+								/* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 15 }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 27,
+									columnNumber: 123
+								}, this)
+							]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 27,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("a", {
+							className: "contact-item",
+							href: "mailto:support@versacraft.co",
+							children: [
+								/* @__PURE__ */ _jsxDEV("span", { children: "04 / CORPORATE SUPPORT" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 28,
+									columnNumber: 75
+								}, this),
+								/* @__PURE__ */ _jsxDEV("b", { children: "support@versacraft.co" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 28,
+									columnNumber: 110
+								}, this),
+								/* @__PURE__ */ _jsxDEV(ArrowUpRight, { size: 15 }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 28,
+									columnNumber: 138
+								}, this)
+							]
+						}, void 0, true, {
+							fileName: _jsxFileName,
+							lineNumber: 28,
+							columnNumber: 11
+						}, this),
+						/* @__PURE__ */ _jsxDEV("p", {
+							className: "contact-note",
+							children: "Dedicated on-call technical support is available for corporate clients."
+						}, void 0, false, {
+							fileName: _jsxFileName,
+							lineNumber: 29,
+							columnNumber: 11
+						}, this)
+					]
+				}, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 24,
+					columnNumber: 9
+				}, this)]
+			}, void 0, true, {
+				fileName: _jsxFileName,
+				lineNumber: 22,
+				columnNumber: 7
+			}, this),
+			/* @__PURE__ */ _jsxDEV("div", {
+				className: "footer-main",
+				children: [
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "footer-brand-column",
+						children: [
+							/* @__PURE__ */ _jsxDEV("a", {
+								className: "footer-logo",
+								href: "#home",
+								"aria-label": "VersaCraft Limited home",
+								children: [/* @__PURE__ */ _jsxDEV("img", {
+									src: logoSymbol,
+									alt: ""
+								}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 125
+								}, this), /* @__PURE__ */ _jsxDEV("span", { children: [/* @__PURE__ */ _jsxDEV("strong", { children: ["VersaCraft ", /* @__PURE__ */ _jsxDEV("em", { children: "Limited" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 181
+								}, this)] }, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 162
+								}, this), /* @__PURE__ */ _jsxDEV("small", { children: "Multifaceted services & expertise" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 206
+								}, this)] }, void 0, true, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 156
+								}, this)]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 33,
+								columnNumber: 48
+							}, this),
+							/* @__PURE__ */ _jsxDEV("p", { children: [
+								"A hybrid tech-engineering ecosystem.",
+								/* @__PURE__ */ _jsxDEV("br", {}, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 308
+								}, this),
+								"Rooted in Bangladesh, ready for what's next."
+							] }, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 33,
+								columnNumber: 269
+							}, this),
+							/* @__PURE__ */ _jsxDEV("div", {
+								className: "footer-socials",
+								children: [/* @__PURE__ */ _jsxDEV("span", { children: "CONNECT WITH US" }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 399
+								}, this), /* @__PURE__ */ _jsxDEV("div", { children: socialLinks.map((social) => /* @__PURE__ */ _jsxDEV("a", {
+									href: social.href,
+									target: "_blank",
+									rel: "noreferrer",
+									"aria-label": `VersaCraft on ${social.name}`,
+									children: /* @__PURE__ */ _jsxDEV(SocialIcon, { name: social.name }, void 0, false, {
+										fileName: _jsxFileName,
+										lineNumber: 33,
+										columnNumber: 578
+									}, this)
+								}, social.name, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 461
+								}, this)) }, void 0, false, {
+									fileName: _jsxFileName,
+									lineNumber: 33,
+									columnNumber: 427
+								}, this)]
+							}, void 0, true, {
+								fileName: _jsxFileName,
+								lineNumber: 33,
+								columnNumber: 367
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 33,
+						columnNumber: 11
+					}, this),
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "footer-group",
+						children: [
+							/* @__PURE__ */ _jsxDEV("h3", { children: "About VCL" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 34,
+								columnNumber: 39
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#about",
+								children: "Our story"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 34,
+								columnNumber: 57
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#pillars",
+								children: "Core pillars"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 34,
+								columnNumber: 87
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#approach",
+								children: "How we work"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 34,
+								columnNumber: 122
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#compliance",
+								children: "Safety & compliance"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 34,
+								columnNumber: 157
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 34,
+						columnNumber: 9
+					}, this),
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "footer-group",
+						children: [
+							/* @__PURE__ */ _jsxDEV("h3", { children: "Resources" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 35,
+								columnNumber: 39
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "mailto:info@versacraft.co",
+								children: "Contact us"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 35,
+								columnNumber: 57
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "mailto:support@versacraft.co",
+								children: "Corporate support"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 35,
+								columnNumber: 107
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#industries",
+								children: "Industries"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 35,
+								columnNumber: 167
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#partners",
+								children: "Our partners"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 35,
+								columnNumber: 203
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 35,
+						columnNumber: 9
+					}, this),
+					/* @__PURE__ */ _jsxDEV("div", {
+						className: "footer-group",
+						children: [
+							/* @__PURE__ */ _jsxDEV("h3", { children: "Our services" }, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 36,
+								columnNumber: 39
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#services",
+								children: "Home & facility care"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 36,
+								columnNumber: 60
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#services",
+								children: "Engineering & automation"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 36,
+								columnNumber: 108
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#services",
+								children: "Technology, software & AI"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 36,
+								columnNumber: 160
+							}, this),
+							/* @__PURE__ */ _jsxDEV("a", {
+								href: "#services",
+								children: "Digital & corporate services"
+							}, void 0, false, {
+								fileName: _jsxFileName,
+								lineNumber: 36,
+								columnNumber: 213
+							}, this)
+						]
+					}, void 0, true, {
+						fileName: _jsxFileName,
+						lineNumber: 36,
+						columnNumber: 9
+					}, this)
+				]
+			}, void 0, true, {
+				fileName: _jsxFileName,
+				lineNumber: 32,
+				columnNumber: 7
+			}, this),
+			/* @__PURE__ */ _jsxDEV("div", {
+				className: "footer-bottom",
+				children: [/* @__PURE__ */ _jsxDEV("small", { children: [
+					"© ",
+					new Date().getFullYear(),
+					" VersaCraft Limited · Prepared by VersaRoots Holdings"
+				] }, void 0, true, {
+					fileName: _jsxFileName,
+					lineNumber: 38,
+					columnNumber: 38
+				}, this), /* @__PURE__ */ _jsxDEV("a", {
+					href: "#home",
+					children: "Back to top ↑"
+				}, void 0, false, {
+					fileName: _jsxFileName,
+					lineNumber: 38,
+					columnNumber: 134
+				}, this)]
+			}, void 0, true, {
+				fileName: _jsxFileName,
+				lineNumber: 38,
+				columnNumber: 7
+			}, this)
+		]
+	}, void 0, true, {
+		fileName: _jsxFileName,
+		lineNumber: 21,
+		columnNumber: 5
+	}, this);
+}
+_c2 = Footer;
+var _c, _c2;
+$RefreshReg$(_c, "SocialIcon");
+$RefreshReg$(_c2, "Footer");
+import * as RefreshRuntime from "/versa_craft/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+import * as __vite_react_currentExports from "/versa_craft/src/components/Footer.jsx";
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+
+  const currentExports = __vite_react_currentExports;
+  queueMicrotask(() => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/Out Project/versa_craft_limited/src/components/Footer.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/Out Project/versa_craft_limited/src/components/Footer.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) { return RefreshRuntime.register(type, "D:/Out Project/versa_craft_limited/src/components/Footer.jsx" + ' ' + id); }
+function $RefreshSig$() { return RefreshRuntime.createSignatureFunctionForTransform(); }
+
+//# sourceMappingURL=data:application/json;base64,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eCJdLCJ2ZXJzaW9uIjozLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbG9nb1N5bWJvbCBmcm9tICcuLi9hc3NldHMvdmNsLXN5bWJvbC1jbGVhbi5wbmcnO1xuaW1wb3J0IHsgQXJyb3dVcFJpZ2h0IH0gZnJvbSAnbHVjaWRlLXJlYWN0JztcblxuZnVuY3Rpb24gU29jaWFsSWNvbih7IG5hbWUgfSkge1xuICBjb25zdCBwcm9wcyA9IHsgdmlld0JveDogJzAgMCAyNCAyNCcsIHdpZHRoOiAxNywgaGVpZ2h0OiAxNywgJ2FyaWEtaGlkZGVuJzogdHJ1ZSB9O1xuICBpZiAobmFtZSA9PT0gJ0ZhY2Vib29rJykgcmV0dXJuIDxzdmcgey4uLnByb3BzfSBmaWxsPVwiY3VycmVudENvbG9yXCI+PHBhdGggZD1cIk0xMy41IDIxdi04aDIuN2wuNC0zaC0zLjFWOC4xYzAtLjkuMy0xLjUgMS42LTEuNWgxLjdWMy45Yy0uMyAwLTEuNC0uMS0yLjYtLjEtMi42IDAtNC40IDEuNi00LjQgNC41VjEwSDd2M2gyLjh2OHpcIiAvPjwvc3ZnPjtcbiAgaWYgKG5hbWUgPT09ICdJbnN0YWdyYW0nKSByZXR1cm4gPHN2ZyB7Li4ucHJvcHN9IGZpbGw9XCJub25lXCIgc3Ryb2tlPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlV2lkdGg9XCIxLjhcIj48cmVjdCB4PVwiM1wiIHk9XCIzXCIgd2lkdGg9XCIxOFwiIGhlaWdodD1cIjE4XCIgcng9XCI1XCIgLz48Y2lyY2xlIGN4PVwiMTJcIiBjeT1cIjEyXCIgcj1cIjRcIiAvPjxjaXJjbGUgY3g9XCIxOFwiIGN5PVwiNi41XCIgcj1cIi44XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIHN0cm9rZT1cIm5vbmVcIiAvPjwvc3ZnPjtcbiAgaWYgKG5hbWUgPT09ICdMaW5rZWRJbicpIHJldHVybiA8c3ZnIHsuLi5wcm9wc30gZmlsbD1cImN1cnJlbnRDb2xvclwiPjxwYXRoIGQ9XCJNNS4yIDguNkgyLjFWMjJoMy4xVjguNlpNMy43IDJhMS44IDEuOCAwIDEgMCAwIDMuNiAxLjggMS44IDAgMCAwIDAtMy42Wk0yMiAxNC4zYzAtNC0yLjEtNS45LTQuOS01LjlhNC4yIDQuMiAwIDAgMC0zLjggMi4xVjguNmgtM1YyMmgzLjF2LTYuNmMwLTEuNy4zLTMuNCAyLjUtMy40czIuMiAyIDIuMiAzLjVWMjJIMjJ2LTcuN1pcIiAvPjwvc3ZnPjtcbiAgcmV0dXJuIDxzdmcgey4uLnByb3BzfSBmaWxsPVwiY3VycmVudENvbG9yXCI+PHBhdGggZD1cIk0yMy41IDYuMmEzIDMgMCAwIDAtMi4xLTIuMUMxOS42IDMuNiAxMiAzLjYgMTIgMy42cy03LjYgMC05LjQuNUEzIDMgMCAwIDAgLjUgNi4yIDMxIDMxIDAgMCAwIDAgMTJhMzEgMzEgMCAwIDAgLjUgNS44IDMgMyAwIDAgMCAyLjEgMi4xYzEuOC41IDkuNC41IDkuNC41czcuNiAwIDkuNC0uNWEzIDMgMCAwIDAgMi4xLTIuMUEzMSAzMSAwIDAgMCAyNCAxMmEzMSAzMSAwIDAgMC0uNS01LjhaTTkuNiAxNS42VjguNGw2LjMgMy42LTYuMyAzLjZaXCIgLz48L3N2Zz47XG59XG5cbmNvbnN0IHNvY2lhbExpbmtzID0gW1xuICB7IG5hbWU6ICdMaW5rZWRJbicsIGhyZWY6ICdodHRwczovL3d3dy5saW5rZWRpbi5jb20vY29tcGFueS92ZXJzYWNyYWZ0bGltaXRlZCcgfSxcbiAgeyBuYW1lOiAnRmFjZWJvb2snLCBocmVmOiAnaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1ZlcnNhQ3JhZnRMaW1pdGVkJyB9LFxuICB7IG5hbWU6ICdJbnN0YWdyYW0nLCBocmVmOiAnaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9WZXJzYUNyYWZ0TGltaXRlZCcgfSxcbiAgeyBuYW1lOiAnWW91VHViZScsIGhyZWY6ICdodHRwczovL3d3dy55b3V0dWJlLmNvbS9AVmVyc2FDcmFmdExpbWl0ZWQnIH0sXG5dO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBGb290ZXIoKSB7XG4gIHJldHVybiAoXG4gICAgPGZvb3RlciBjbGFzc05hbWU9XCJmb290ZXJcIiBpZD1cImNvbnRhY3RcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFjdC1zZWN0aW9uIHNlY3Rpb24tcGFkXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFjdC1jb3B5XCI+PHNwYW4gY2xhc3NOYW1lPVwiZXllYnJvd1wiPkxFVCdTIEJVSUxEIFRIRSBGVVRVUkUsIFRPR0VUSEVSPC9zcGFuPjxoMj5IYXZlIGEgcHJvamVjdDxiciAvPmluIDxlbT5taW5kPzwvZW0+PC9oMj48cD5UZWxsIHVzIHdoYXQgeW91IG5lZWQuIE91ciB0ZWFtIHdpbGwgaGVscCB5b3UgZmluZCB0aGUgcmlnaHQgcGVvcGxlIGFuZCB0aGUgcmlnaHQgbmV4dCBzdGVwLjwvcD48YSBjbGFzc05hbWU9XCJidXR0b24tcHJpbWFyeVwiIGhyZWY9XCJtYWlsdG86aW5mb0B2ZXJzYWNyYWZ0LmNvXCI+U3RhcnQgYSBjb252ZXJzYXRpb24gPEFycm93VXBSaWdodCBzaXplPXsxN30gLz48L2E+PC9kaXY+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFjdC1kZXRhaWxzXCI+XG4gICAgICAgICAgPGEgY2xhc3NOYW1lPVwiY29udGFjdC1pdGVtXCIgaHJlZj1cImh0dHBzOi8vbWFwcy5nb29nbGUuY29tLz9xPVJha2hpK1Rvd2VyLCtBcmljaHB1citSb2FkLCtUb25naSwrR2F6aXB1ciwrRGhha2EsK0JhbmdsYWRlc2hcIiB0YXJnZXQ9XCJfYmxhbmtcIiByZWw9XCJub3JlZmVycmVyXCI+PHNwYW4+MDEgLyBIT01FIE9GRklDRTwvc3Bhbj48Yj5SYWtoaSBUb3dlciwgQXJpY2hwdXIgUm9hZCw8YnIgLz5Ub25naSwgR2F6aXB1ciwgRGhha2EsIEJhbmdsYWRlc2g8L2I+PEFycm93VXBSaWdodCBzaXplPXsxNX0gLz48L2E+XG4gICAgICAgICAgPGEgY2xhc3NOYW1lPVwiY29udGFjdC1pdGVtXCIgaHJlZj1cInRlbDorODgwMTgxODg0ODg1MFwiPjxzcGFuPjAyIC8gQ0FMTCBPVVIgVEVBTTwvc3Bhbj48Yj4rODggMDE4MTggODQ4ODUwPC9iPjxBcnJvd1VwUmlnaHQgc2l6ZT17MTV9IC8+PC9hPlxuICAgICAgICAgIDxhIGNsYXNzTmFtZT1cImNvbnRhY3QtaXRlbVwiIGhyZWY9XCJtYWlsdG86aW5mb0B2ZXJzYWNyYWZ0LmNvXCI+PHNwYW4+MDMgLyBFTUFJTCBVUzwvc3Bhbj48Yj5pbmZvQHZlcnNhY3JhZnQuY288L2I+PEFycm93VXBSaWdodCBzaXplPXsxNX0gLz48L2E+XG4gICAgICAgICAgPGEgY2xhc3NOYW1lPVwiY29udGFjdC1pdGVtXCIgaHJlZj1cIm1haWx0bzpzdXBwb3J0QHZlcnNhY3JhZnQuY29cIj48c3Bhbj4wNCAvIENPUlBPUkFURSBTVVBQT1JUPC9zcGFuPjxiPnN1cHBvcnRAdmVyc2FjcmFmdC5jbzwvYj48QXJyb3dVcFJpZ2h0IHNpemU9ezE1fSAvPjwvYT5cbiAgICAgICAgICA8cCBjbGFzc05hbWU9XCJjb250YWN0LW5vdGVcIj5EZWRpY2F0ZWQgb24tY2FsbCB0ZWNobmljYWwgc3VwcG9ydCBpcyBhdmFpbGFibGUgZm9yIGNvcnBvcmF0ZSBjbGllbnRzLjwvcD5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZm9vdGVyLW1haW5cIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZvb3Rlci1icmFuZC1jb2x1bW5cIj48YSBjbGFzc05hbWU9XCJmb290ZXItbG9nb1wiIGhyZWY9XCIjaG9tZVwiIGFyaWEtbGFiZWw9XCJWZXJzYUNyYWZ0IExpbWl0ZWQgaG9tZVwiPjxpbWcgc3JjPXtsb2dvU3ltYm9sfSBhbHQ9XCJcIiAvPjxzcGFuPjxzdHJvbmc+VmVyc2FDcmFmdCA8ZW0+TGltaXRlZDwvZW0+PC9zdHJvbmc+PHNtYWxsPk11bHRpZmFjZXRlZCBzZXJ2aWNlcyAmYW1wOyBleHBlcnRpc2U8L3NtYWxsPjwvc3Bhbj48L2E+PHA+QSBoeWJyaWQgdGVjaC1lbmdpbmVlcmluZyBlY29zeXN0ZW0uPGJyIC8+Um9vdGVkIGluIEJhbmdsYWRlc2gsIHJlYWR5IGZvciB3aGF0JmFwb3M7cyBuZXh0LjwvcD48ZGl2IGNsYXNzTmFtZT1cImZvb3Rlci1zb2NpYWxzXCI+PHNwYW4+Q09OTkVDVCBXSVRIIFVTPC9zcGFuPjxkaXY+e3NvY2lhbExpbmtzLm1hcCgoc29jaWFsKSA9PiA8YSBrZXk9e3NvY2lhbC5uYW1lfSBocmVmPXtzb2NpYWwuaHJlZn0gdGFyZ2V0PVwiX2JsYW5rXCIgcmVsPVwibm9yZWZlcnJlclwiIGFyaWEtbGFiZWw9e2BWZXJzYUNyYWZ0IG9uICR7c29jaWFsLm5hbWV9YH0+PFNvY2lhbEljb24gbmFtZT17c29jaWFsLm5hbWV9IC8+PC9hPil9PC9kaXY+PC9kaXY+PC9kaXY+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZm9vdGVyLWdyb3VwXCI+PGgzPkFib3V0IFZDTDwvaDM+PGEgaHJlZj1cIiNhYm91dFwiPk91ciBzdG9yeTwvYT48YSBocmVmPVwiI3BpbGxhcnNcIj5Db3JlIHBpbGxhcnM8L2E+PGEgaHJlZj1cIiNhcHByb2FjaFwiPkhvdyB3ZSB3b3JrPC9hPjxhIGhyZWY9XCIjY29tcGxpYW5jZVwiPlNhZmV0eSAmYW1wOyBjb21wbGlhbmNlPC9hPjwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZvb3Rlci1ncm91cFwiPjxoMz5SZXNvdXJjZXM8L2gzPjxhIGhyZWY9XCJtYWlsdG86aW5mb0B2ZXJzYWNyYWZ0LmNvXCI+Q29udGFjdCB1czwvYT48YSBocmVmPVwibWFpbHRvOnN1cHBvcnRAdmVyc2FjcmFmdC5jb1wiPkNvcnBvcmF0ZSBzdXBwb3J0PC9hPjxhIGhyZWY9XCIjaW5kdXN0cmllc1wiPkluZHVzdHJpZXM8L2E+PGEgaHJlZj1cIiNwYXJ0bmVyc1wiPk91ciBwYXJ0bmVyczwvYT48L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmb290ZXItZ3JvdXBcIj48aDM+T3VyIHNlcnZpY2VzPC9oMz48YSBocmVmPVwiI3NlcnZpY2VzXCI+SG9tZSAmYW1wOyBmYWNpbGl0eSBjYXJlPC9hPjxhIGhyZWY9XCIjc2VydmljZXNcIj5FbmdpbmVlcmluZyAmYW1wOyBhdXRvbWF0aW9uPC9hPjxhIGhyZWY9XCIjc2VydmljZXNcIj5UZWNobm9sb2d5LCBzb2Z0d2FyZSAmYW1wOyBBSTwvYT48YSBocmVmPVwiI3NlcnZpY2VzXCI+RGlnaXRhbCAmYW1wOyBjb3Jwb3JhdGUgc2VydmljZXM8L2E+PC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZm9vdGVyLWJvdHRvbVwiPjxzbWFsbD7CqSB7bmV3IERhdGUoKS5nZXRGdWxsWWVhcigpfSBWZXJzYUNyYWZ0IExpbWl0ZWQgwrcgUHJlcGFyZWQgYnkgVmVyc2FSb290cyBIb2xkaW5nczwvc21hbGw+PGEgaHJlZj1cIiNob21lXCI+QmFjayB0byB0b3Ag4oaRPC9hPjwvZGl2PlxuICAgIDwvZm9vdGVyPlxuICApO1xufVxuIl19

@@ -1,4 +1,4 @@
-import logo from '../assets/vcl-logo.png';
+import logoSymbol from '../assets/vcl-symbol-clean.png';
 import { ArrowUpRight } from 'lucide-react';
 
 function SocialIcon({ name }) {
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-main">
-          <div className="footer-brand-column"><a className="footer-logo" href="#home"><img src={logo} alt="VersaCraft Limited" /></a><p>A hybrid tech-engineering ecosystem.<br />Rooted in Bangladesh, ready for what&apos;s next.</p><div className="footer-socials"><span>CONNECT WITH US</span><div>{socialLinks.map((social) => <a key={social.name} href={social.href} target="_blank" rel="noreferrer" aria-label={`VersaCraft on ${social.name}`}><SocialIcon name={social.name} /></a>)}</div></div></div>
+          <div className="footer-brand-column"><a className="footer-logo" href="#home" aria-label="VersaCraft Limited home"><img src={logoSymbol} alt="" /><span><strong>VersaCraft <em>Limited</em></strong><small>Multifaceted services &amp; expertise</small></span></a><p>A hybrid tech-engineering ecosystem.<br />Rooted in Bangladesh, ready for what&apos;s next.</p><div className="footer-socials"><span>CONNECT WITH US</span><div>{socialLinks.map((social) => <a key={social.name} href={social.href} target="_blank" rel="noreferrer" aria-label={`VersaCraft on ${social.name}`}><SocialIcon name={social.name} /></a>)}</div></div></div>
         <div className="footer-group"><h3>About VCL</h3><a href="#about">Our story</a><a href="#pillars">Core pillars</a><a href="#approach">How we work</a><a href="#compliance">Safety &amp; compliance</a></div>
         <div className="footer-group"><h3>Resources</h3><a href="mailto:info@versacraft.co">Contact us</a><a href="mailto:support@versacraft.co">Corporate support</a><a href="#industries">Industries</a><a href="#partners">Our partners</a></div>
         <div className="footer-group"><h3>Our services</h3><a href="#services">Home &amp; facility care</a><a href="#services">Engineering &amp; automation</a><a href="#services">Technology, software &amp; AI</a><a href="#services">Digital &amp; corporate services</a></div>

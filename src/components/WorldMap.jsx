@@ -2,15 +2,18 @@
 import worldMapPaths from '../assets/world-map-paths.json';
 
 export default function WorldMap() {
+  const filterId = 'world-map-land-shadow';
+
   return (
-    <section className="map-art" aria-label="Versa Craft Limited worldwide">
+    <div className="map-stage">
+    <section className="map-art map-background" aria-label="Versa Craft Limited worldwide">
       <svg className="world-map-svg" viewBox="0 0 1000 507" role="img" aria-label="World map with Bangladesh highlighted" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <filter id="land-shadow" x="-10%" y="-10%" width="120%" height="130%">
+          <filter id={filterId} x="-10%" y="-10%" width="120%" height="130%">
             <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#8195a7" floodOpacity=".45" />
           </filter>
         </defs>
-        <g fill="#fff" stroke="#fff" strokeWidth=".45" strokeLinejoin="round" filter="url(#land-shadow)">
+        <g fill="#fff" stroke="#fff" strokeWidth=".45" strokeLinejoin="round" filter={`url(#${filterId})`}>
           {worldMapPaths.map((path, index) => <path key={index} d={path} />)}
         </g>
       </svg>
@@ -24,5 +27,6 @@ export default function WorldMap() {
         <small>Dhaka, Bangladesh</small>
       </div>
     </section>
+    </div>
   );
 }

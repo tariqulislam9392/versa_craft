@@ -2,7 +2,6 @@ import Navbar from './components/Navbar';
 import WorldMap from './components/WorldMap';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Pillars from './components/Pillars';
 import Partners from './components/Partners';
 import About from './components/About';
 import Industries from './components/Industries';
@@ -18,7 +17,6 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Pillars />
         <Services />
         <Industries />
         <Approach />
