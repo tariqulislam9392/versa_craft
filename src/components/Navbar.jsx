@@ -120,7 +120,11 @@ export default function Navbar() {
                 </section>
               ))}
             </div>
-            <div className="mega-footer"><span>Need help finding the right service?</span><a href="#contact" onClick={closeMenus}>Talk to our team <ArrowUpRight size={15} /></a></div>
+            <div className="mega-footer">
+              <span>Need help finding the right service?</span>
+              <a href="#/services" onClick={closeMenus}>View all services <ArrowUpRight size={15} /></a>
+              <a href="#contact" onClick={closeMenus}>Talk to our team <ArrowUpRight size={15} /></a>
+            </div>
           </div>
         </div>
       )}

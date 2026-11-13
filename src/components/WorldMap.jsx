@@ -1,11 +1,24 @@
+import { useEffect, useState } from 'react';
 // Natural Earth world geometry in a Robinson projection.
 import worldMapPaths from '../assets/world-map-paths.json';
 
 export default function WorldMap() {
   const filterId = 'world-map-land-shadow';
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 140);
+
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
 
   return (
-    <div className="map-stage">
+    <div
+      className={`map-stage${isScrolled ? ' is-scrolled' : ''}`}
+      onDoubleClick={(event) => event.preventDefault()}
+    >
     <section className="map-art map-background" aria-label="Versa Craft Limited worldwide">
       <svg className="world-map-svg" viewBox="0 0 1000 507" role="img" aria-label="World map with Bangladesh highlighted" preserveAspectRatio="xMidYMid meet">
         <defs>

@@ -1,4 +1,4 @@
-import { ArrowDownRight, BadgeCheck, ClipboardList, FileCheck2, Handshake, Search, ShieldCheck, Sparkles, Wrench } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, BadgeCheck, ClipboardList, FileCheck2, Handshake, Search, ShieldCheck, Sparkles, Wrench } from 'lucide-react';
 
 const advantages = [
   { icon: <Handshake size={18} />, title: 'One-stop hybrid ecosystem', text: 'Engineering, facility care, software, and digital branding under one roof.' },
@@ -32,7 +32,7 @@ export default function Approach() {
         </aside>
       </div>
       <div className="compliance-band" id="compliance">
-        <div className="compliance-heading"><ShieldCheck size={23} /><div><b>Safety, security &amp; compliance come first.</b><p>We protect people, projects, and information with care at every stage.</p></div></div>
+        <div className="compliance-heading"><ShieldCheck size={23} /><div><b>Safety, security &amp; compliance come first.</b><p>We protect people, projects, and information with care at every stage.</p><a className="compliance-link" href="#contact">Talk to our team <ArrowUpRight size={14} /></a></div></div>
         <div className="compliance-points">
           <article><span>01 / EHS</span><p>On-site safety practices and a zero-accident mindset.</p></article>
           <article><span>02 / CYBERSECURITY</span><p>Secure infrastructure and data protection for digital services.</p></article>

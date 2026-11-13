@@ -2106,6 +2106,16 @@
     width: auto
 }
 
+.compliance-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    color: #8b6615;
+    font-size: 10px;
+    font-weight: 700
+}
+
 .compliance-points {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2608,6 +2618,10 @@ body {
 .compliance-band {
     background: #101a17;
     border-color: #30413a
+}
+
+.compliance-link {
+    color: #72e5c4
 }
 
 .compliance-heading>b,
@@ -4101,33 +4115,130 @@ body {
     background: linear-gradient(145deg, #224035, #182c25);
 }
 
-/* Fixed, subdued map background with no reserved space in the page flow. */
+/* Keep the map prominent at the top, then soften it behind page content. */
 .map-stage {
     width: 100%;
-    height: 0;
+    height: 66vh;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .map-art.map-background {
     position: fixed;
-    inset: 0;
+    inset: 78px 0 0;
     z-index: 1;
     display: grid;
     width: 100%;
-    height: 100vh;
+    height: auto;
     overflow: hidden;
     place-items: center;
-    background: transparent;
-    opacity: .08;
+    background: linear-gradient(180deg, #080e0d 0%, transparent 180px), radial-gradient(ellipse at 48% 42%, #0d3b31 0%, transparent 43%), radial-gradient(ellipse at 5% 0%, #0a2c27 0%, transparent 35%), linear-gradient(145deg, #080e0d 0%, #0b1714 56%, #07100f 100%);
+    opacity: 1;
     pointer-events: none;
+    transition: opacity .55s ease;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .map-art.map-background .world-map-svg {
-    width: min(100%, 1500px);
-    height: 100%;
+    width: min(90vw, 1200px);
+    height: min(82vh, 620px);
     object-fit: contain;
+    filter: drop-shadow(0 0 18px rgba(255, 255, 255, .14));
+    transform: translate(3vw, -2vh);
 }
 
-.map-art.map-background .bangladesh-marker,
-.map-art.map-background .map-tooltip {
+.map-art.map-background .bangladesh-marker {
     pointer-events: none;
+    opacity: 1;
+    width: 22px;
+    height: 22px;
+    left: 74.2%;
+    top: 29.3%;
+}
+
+.map-art.map-background .marker-core {
+    width: 8px;
+    height: 8px;
+}
+
+.map-art.map-background .map-tooltip {
+    left: calc(74.2% + 24px);
+    top: calc(29.3% - 12px);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.map-stage.is-scrolled .map-art.map-background {
+    opacity: .24;
+}
+
+.hero {
+    background: linear-gradient(180deg, rgba(8, 14, 13, 0) 0%, rgba(8, 14, 13, .34) 30%, rgba(7, 16, 15, .76) 100%);
+}
+
+.site-header {
+    border-bottom-color: #8cf5d30c;
+}
+
+.about,
+.services,
+.industries,
+.approach,
+.partners,
+.footer {
+    background: linear-gradient(125deg, rgba(9, 18, 15, .86), rgba(14, 33, 28, .82) 52%, rgba(10, 20, 17, .86));
+}
+
+@media (max-width: 700px) {
+    .map-stage {
+        height: 58vh;
+    }
+
+    .map-art.map-background {
+        inset: 70px 0 0;
+    }
+
+    .map-art.map-background .world-map-svg {
+        width: min(96vw, 620px);
+        height: min(48vh, 320px);
+        transform: translateY(-5vh);
+    }
+
+    .map-art.map-background .bangladesh-marker {
+        width: 18px;
+        height: 18px;
+        left: 62.7%;
+        top: 31.7%;
+    }
+
+    .map-art.map-background .map-tooltip {
+        left: calc(62.7% + 18px);
+        top: calc(31.7% - 12px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .map-art.map-background {
+        transition: none;
+    }
+}
+
+.services-page {
+    position: relative;
+    z-index: 2;
+    min-height: calc(100vh - 78px);
+}
+
+.services-page .services {
+    padding-top: 56px;
+    padding-bottom: 90px;
+}
+
+@media (max-width: 700px) {
+    .services-page .services {
+        padding-top: 38px;
+    }
 }
