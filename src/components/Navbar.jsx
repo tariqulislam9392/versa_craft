@@ -89,6 +89,7 @@ export default function Navbar() {
           <span className="brand-name">VersaCraft <small>Limited</small></span>
         </a>
         <div className={`nav-links${open ? ' nav-links-open' : ''}`}>
+          <a href="#home" onClick={closeMenus}>Home</a>
           <button className={`nav-products${productsOpen ? ' is-open' : ''}`} type="button" aria-expanded={productsOpen} aria-controls="products-mega-menu" onClick={() => setProductsOpen(!productsOpen)}>
             Services <ChevronDown size={14} />
           </button>
