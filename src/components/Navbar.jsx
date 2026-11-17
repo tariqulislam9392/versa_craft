@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowRight, ArrowUpRight, Building2, ChevronDown, Cpu, Hammer, Menu, Megaphone, X, Zap } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, AtSign, Building2, ChevronDown, Cpu, Globe2, Hammer, Link2, Mail, Menu, Megaphone, UserRound, X, Zap } from 'lucide-react';
 import logo from '../assets/vcl-symbol-transparent.png';
 
 const serviceCategories = [
@@ -51,20 +51,24 @@ const links = [
   { label: 'Partners', href: '#partners' },
 ];
 
+const teamCardSlots = [0, 1, 2, 3];
+
 export default function Navbar() {
   const headerRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [teamOpen, setTeamOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(0);
   const active = serviceCategories[activeCategory];
 
   const closeMenus = useCallback(() => {
     setOpen(false);
     setProductsOpen(false);
+    setTeamOpen(false);
   }, []);
 
   useEffect(() => {
-    if (!open && !productsOpen) return undefined;
+    if (!open && !productsOpen && !teamOpen) return undefined;
 
     const handlePointerDown = (event) => {
       if (!headerRef.current?.contains(event.target)) closeMenus();
@@ -79,7 +83,7 @@ export default function Navbar() {
       document.removeEventListener('pointerdown', handlePointerDown);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [closeMenus, open, productsOpen]);
+  }, [closeMenus, open, productsOpen, teamOpen]);
 
   return (
     <header className="site-header" ref={headerRef}>
@@ -90,8 +94,11 @@ export default function Navbar() {
         </a>
         <div className={`nav-links${open ? ' nav-links-open' : ''}`}>
           <a href="#home" onClick={closeMenus}>Home</a>
-          <button className={`nav-products${productsOpen ? ' is-open' : ''}`} type="button" aria-expanded={productsOpen} aria-controls="products-mega-menu" onClick={() => setProductsOpen(!productsOpen)}>
+          <button className={`nav-products${productsOpen ? ' is-open' : ''}`} type="button" aria-expanded={productsOpen} aria-controls="products-mega-menu" onClick={() => { setProductsOpen(!productsOpen); setTeamOpen(false); }}>
             Services <ChevronDown size={14} />
+          </button>
+          <button className={`nav-products${teamOpen ? ' is-open' : ''}`} type="button" aria-expanded={teamOpen} aria-controls="team-mega-menu" onClick={() => { setTeamOpen(!teamOpen); setProductsOpen(false); }}>
+            Team <ChevronDown size={14} />
           </button>
           {links.map((link) => <a key={link.label} href={link.href} onClick={closeMenus}>{link.label}</a>)}
           <a className="mobile-login" href="#contact" onClick={closeMenus}>Let&apos;s talk <ArrowUpRight size={16} /></a>
@@ -123,9 +130,33 @@ export default function Navbar() {
             </div>
             <div className="mega-footer">
               <span>Need help finding the right service?</span>
-              <a href="#/services" onClick={closeMenus}>View all services <ArrowUpRight size={15} /></a>
               <a href="#contact" onClick={closeMenus}>Talk to our team <ArrowUpRight size={15} /></a>
             </div>
+          </div>
+        </div>
+      )}
+
+      {teamOpen && (
+        <div className="team-mega-menu" id="team-mega-menu">
+          <div className="team-menu-heading">
+            <span className="eyebrow">OUR TEAM</span>
+            <h2>Meet the people behind our work</h2>
+          </div>
+          <div className="team-card-grid">
+            {teamCardSlots.map((slot) => (
+              <article className="team-template-card" key={slot}>
+                <div className="team-avatar-placeholder" aria-hidden="true"><UserRound size={46} strokeWidth={1.25} /></div>
+                <h3>Team member</h3>
+                <p className="team-role-placeholder">Role / position</p>
+                <p className="team-specialty-placeholder">Department or specialty</p>
+                <div className="team-social-placeholders" aria-hidden="true">
+                  <Globe2 size={18} />
+                  <AtSign size={18} />
+                  <Mail size={18} />
+                  <Link2 size={18} />
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       )}
