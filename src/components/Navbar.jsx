@@ -104,7 +104,7 @@ export default function Navbar() {
           <a className="mobile-login" href="#contact" onClick={closeMenus}>Let&apos;s talk <ArrowUpRight size={16} /></a>
         </div>
         <a className="nav-cta" href="#contact" onClick={closeMenus}>Let&apos;s talk <ArrowUpRight size={16} /></a>
-        <button className="menu-toggle" type="button" onClick={() => { setOpen(!open); setProductsOpen(false); }} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open}>
+        <button className="menu-toggle" type="button" onClick={() => { setOpen(!open); setProductsOpen(false); setTeamOpen(false); }} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
